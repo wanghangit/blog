@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 匹配文本元素为空的节点，可用来隐藏空标签 */
+    p:empty{
+      display: none;
+    }
+    /* 匹配是父节点唯一子元素 */
+    img:only-child{
+      border: 1px salmon solid;
+    }
+    a img{
+      width: 100px;
+    }
+    /* 父元素中存在的唯一一个类型的元素只能匹配html元素 */
+    img:only-of-type{
+      float: right;
+    }
+    /* 选择某一类型元素出现的第一个 */
+    .parent > p:first-of-type{
+      color: aqua;
+    }
+    /* 选择某一类型元素出现的最后一个 */
+    .parent >p:last-of-type{
+      color: rebeccapurple;
+    }
+    /* 可以填固定的数字也可以填这种数学表达是an+b，n是从0算起的，类似的伪类还有nth-of-type()选择某一类型的元素 */
+    ul > li:nth-child(3n+1){
+      font-weight: bold;
+      color: yellowgreen;
+    }
+    /* 动态伪类属性表示未被访问 */
+    .btn:link{
+      color: gray;
+    }
+    /* 动态伪类属性表示被访问过 */
+    .btn:visited{
+      color: red;
+    } 
+  </style>
+</head>
+<body>
+  <a href="#"><img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1579672350&di=dc2de094bda092a7da059eb8768783f4&src=http://images.china.cn/attachement/jpg/site1000/20141203/7427ea21095115e896280f.jpg"/></a>
+  <a href="#"><img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1579672350&di=dc2de094bda092a7da059eb8768783f4&src=http://images.china.cn/attachement/jpg/site1000/20141203/7427ea21095115e896280f.jpg"/><em>美景</em></a>
+  <p></p>
+  <p> </p>
+  <div class="parent">
+    <span>span</span>
+    <p>firstP</p>
+    <p>secondP</p>
+    <div>div</div>
+  </div>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+  <a href="https://www.bai.com/" class="btn">点击</a>
+  <a href="https://www.baidu.com/" class="btn">点击</a>
+</body>
+</html>

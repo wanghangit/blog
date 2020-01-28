@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 功能可以让元素第一个字母使用一个虚构元素包围 */
+    p::first-letter{
+      font-size: 30px;
+    }
+    /* 给第一行添加样式只能应用在块级元素上 */
+    .title::first-line{
+      color: aquamarine;
+    }
+    /* 在元素前边创建元素 */
+    .name::before{
+      content: "&&";
+    }
+    .name::after{
+      content: "**";
+    }
+  </style>
+</head>
+<body>
+  <p>This is a demo</p>
+  <p class="title">美景舒适家,主要提供成都地暖、成都中央空调,家用新风系统和净水系统。是四川专业的暖通公司之一。美景舒适家致力提供优质的暖气设备,暖气安装,家用中央空调设备和中央</p>
+  <div class="name">before和after</div>
+</body>
+</html>

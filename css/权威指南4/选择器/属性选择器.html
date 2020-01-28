@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 以btn开头 */
+    [class|='btn'] {
+      color: aqua;
+    }
+    /* 以en结尾 */
+    [class$='en'] {
+      color: rosybrown;
+    }
+    /* 包含mm */
+    [class*='mm']{
+      color: cadetblue;
+    }
+    /* 包含a这个单词的属性 */
+    [title~='a']{
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="btn">btn</div>
+  <button class="btn-sm">sm</button>
+  <div class="btn-lg">lg</div>
+  <div class="a-en">a-en</div>
+  <div class="b-en">b-en</div>
+  <div class="ammb">ammb</div>
+  <div class="cmma">cmma</div>
+  <div title="a bb">abb</div>
+  <div title="a cc">acc</div>
+</body>
+
+</html>
