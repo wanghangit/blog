@@ -1,9 +1,10 @@
 const router = require("koa-router")();
 
-router.get("/user", ctx => {
+router.get("/getUserInfo", ctx => {
   console.log(ctx);
   ctx.body = {
-    aa: "vv"
+    name: "xiaoming",
+    age: 18
   };
 });
 module.exports = router.routes();
